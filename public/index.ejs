@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html ng-app="votingApp">
+	<head>
+		<title>Votting App</title>
+        <link rel="stylesheet" href="https://unpkg.com/angular-toastr/dist/angular-toastr.css" />
+		<link href="./css/bootstrap.min.css" rel="stylesheet">
+		<link href="./css/main.css" rel="stylesheet">
+        <script type="text/javascript" src="./js/components/jquery-3.2.1.min.js"></script>
+        <script type="text/javascript" src="./js/components/angular.min.js"></script>
+        <script type="text/javascript" src="./js/components/jquery-ui.min.js"></script>
+        <script type="text/javascript" src="./js/components/bootstrap.min.js"></script>
+        <script type="text/javascript" src="./js/components/ui-bootstrap-1.3.3.min.js"></script>
+        <script type="text/javascript" src="./js/components/angular-modal-service.js"></script>
+        <script type="text/javascript" src="https://unpkg.com/angular-toastr/dist/angular-toastr.tpls.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.min.js"></script>
+        <script type="text/javascript" src="./js/main.js"></script>
+        <script type="text/javascript" src="./js/controllers/navbar.controller.js"></script>
+        <script type="text/javascript" src="./js/controllers/home.controller.js"></script>
+        <script type="text/javascript" src="./js/controllers/myPolls.controller.js"></script>
+        <script type="text/javascript" src="./js/controllers/poll.controller.js"></script>
+        <script type="text/javascript" src="./js/controllers/newpoll.controller.js"></script>
+        <script type="text/javascript" src="./js/controllers/modal.controller.js"></script>
+        <script type="text/javascript" src="./js/services/vottingApp.service.js"></script>
+	</head>
+
+	<body>
+
+
+    <!--ver lik para tentar resolver problema: https://stackoverflow.com/questions/20087627/how-to-create-separate-angularjs-controller-files-->
+
+	<section id="navbar">
+      <% include ./views/navbar.html %>
+    </section>    
+
+    
+    <section id="dynamicContent">
+      <%- include(view) %>
+    </section>
+
+    <section id="bootstrapFooter">
+      <% include ./views/footer.html %>
+    </section>
+
+	</body>
+</html>

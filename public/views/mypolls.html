@@ -1,0 +1,16 @@
+<div ng-controller="myPollsController">
+
+    <div class="loader" ng-show="loader"></div>
+
+    <div class="col-md-10 col-md-offset-1 text-center polls" ng-show="!loader">
+        <h1>Voting App</h1>
+        <h3>You can manage your polls bellow!</h3>
+        <br>
+        <div class="poll-container" ng-repeat="items in polls.items">
+          <span class="float-left">{{items.title}}</span>
+          <button class="btn btn-danger btn-myPolls" title="delete poll" ng-click="deletePoll(items.poll_id)">Delete</button>
+          <button class="btn btn-primary btn-myPolls" title="view poll" ng-click="viewPoll(items.poll_id)">View</button>
+        </div>
+        <br><br>
+    </div>
+</div>

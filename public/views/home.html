@@ -1,0 +1,18 @@
+<div ng-controller="homeController">
+
+    <div class="loader" ng-show="loader"></div>
+
+    <div class="col-md-10 col-md-offset-1 text-center polls" ng-show="!loader">
+        <h1>Voting App</h1>
+        <h3>Below are polls hosted by Voting App.</h3>
+        <h3>Select a poll to see the results and vote!</h3>
+        <h3 ng-cloak ng-hide="login"><a href="./login/twitter">Login</a> to create a new poll!</h3>
+        <br>
+        <div class="poll-container-div">
+            <div ng-cloak class="poll-container poll-container-hover" ng-repeat="items in polls.items" ng-click="viewPoll(items.poll_id)">
+                <span>{{items.title}}</span>
+            </div>
+        </div>
+        <br><br>
+    </div>
+</div>

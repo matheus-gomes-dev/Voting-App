@@ -1,0 +1,136 @@
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+  display: none !important;
+}
+
+.loader{
+  margin: auto;
+  position: relative;
+  top: 150px;
+}
+
+#twitter-btn{
+	position: relative;
+	top: 7px;
+	left: 7px;
+}
+
+.poll-btns{
+  margin-top: 20px;
+}
+
+.twitter-btn a{
+  text-decoration: none !important;
+  color: white;
+}
+
+#twitter-btn-responsive{
+  background-color: #5bc0de;
+}
+
+#twitter-btn-responsive a{
+  text-decoration: none !important;
+  color: white;
+}
+
+.glyphicon-triangle-bottom{
+	font-size: 10px;
+}
+
+.newPoll{
+  background-color: #ebebe0;
+  border-radius: 5px;
+  height: 400px;
+}
+
+.polls{
+  background-color: #E6E6E6;
+  border-radius: 5px;
+  padding-bottom: 50px;
+  margin-bottom: 50px;
+}
+
+.poll-container-div{
+  margin-top: 50px;
+}
+
+.poll-container{
+  background-color: white;
+  font-size: 20px;
+  height: 50px;
+  border-radius: 15px;
+  margin-top: 5px;
+}
+
+.poll-container span{
+  position: relative;
+  top: 8px;
+}
+
+.poll-container-hover:hover{
+  background-color: #5bc0de;
+  color: white;
+  cursor: pointer;
+}
+
+.poll-container .float-left{
+  float: left;
+  position: relative;
+  left: 20px; 
+}
+
+.navbar-brand:hover{
+  cursor: pointer;
+}
+
+
+.newPoll .newPollTitle{
+  margin-top: 40px;
+}
+
+.newPoll .btn{
+  margin-top: 20px;
+}
+
+#home h1{
+  font-size: 50px;
+}
+
+.btn-myPolls{
+  float: right;
+  position: relative;
+  right: 15px;
+  top: 7px;
+}
+
+#footer .footer-col{
+  background-color: #E6E6E6;
+  color: black;
+}
+
+#footer p{
+  font-style: italic;
+}
+
+
+/* loader begin */
+.loader {
+  	border: 16px solid #f3f3f3;
+  	border-radius: 50%;
+  	border-top: 16px solid #3498db;
+  	width: 120px;
+  	height: 120px;
+  	-webkit-animation: spin 2s linear infinite; /* Safari */
+  	animation: spin 2s linear infinite;
+}
+
+/* Safari */
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+/* end loader */

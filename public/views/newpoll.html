@@ -1,0 +1,10 @@
+<div class="col-md-10 col-md-offset-1 newPoll" ng-controller="newPollController">
+	<form ng-submit="createPoll()">
+	 	<h1>New Poll</h1>
+	 	<h4 class="newPollTitle">Title:</h4>
+	 	<input type="text" class="form-control" required ng-model="newPoll.title">
+	 	<h4>Options (separated by line):</h4>
+	 	<textarea class="form-control" rows="5" required ng-model="newPoll.options"></textarea>
+	 	<button type="submit" class="btn btn-primary">Create</button>
+	</form>
+</div>
