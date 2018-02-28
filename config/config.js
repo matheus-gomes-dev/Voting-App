@@ -15,7 +15,7 @@ const config = {
 	passport:{
 		consumerKey: "nloM1Tbc8iBHQYvFK8ReN0fLX",
 	    consumerSecret: "ta0vygeuelkDujM87L669Es6deXodLRLD7N9JEHsCtGqQqAaeZ",
-    	callbackURL: 'http://127.0.0.1:3000/login/twitter/return'
+    	callbackURL: 'https://sheltered-harbor-60080.herokuapp.com/login/twitter/return'
 	}
 }
 
