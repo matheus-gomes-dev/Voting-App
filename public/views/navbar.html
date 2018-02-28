@@ -32,9 +32,14 @@
         <li class="visible-xs" ng-show="user == false" id="twitter-btn-responsive">
           <a href="./login/twitter">Login with Twitter</a>
         </li>
-        <li ng-show="user != false">
+        
+        <li ng-show="user != false" id="dropdownMenu1" data-toggle="dropdown">
           <a href="#">{{user}} <span class="glyphicon glyphicon-triangle-bottom" aria-hidden="true"></span></a>
         </li>
+        <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+          <li><a href="#">Logout</a></li>
+        </ul>
+        
       </ul>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
