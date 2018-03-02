@@ -1,20 +1,23 @@
-myApp.controller('myPollsController', function($scope, $http, toastr) {
+myApp.controller('myPollsController', function($scope, $http, toastr, vottingAppServices) {
 
 	$scope.loader = true;
 	$scope.polls = {
 		items: []
 	}
 
-	var user_id = localStorage.getItem('votingApp_user_id');
-	$http.get('/api/poll/mypolls?user_id=' + user_id).then(function(response){
-		console.log(response)
-		console.log(JSON.stringify(response.data[0]))
-		$scope.loader = false;
-		//$scope.polls.items = response.data;
-		$scope.polls = {
-			items: response.data
+	vottingAppServices.authentication(function(response){
+		if(response){
+			$http.get('/api/poll/mypolls?user_id=' + response.id).then(function(res){
+				console.log(res)
+				console.log(JSON.stringify(res.data[0]))
+				$scope.loader = false;
+				//$scope.polls.items = response.data;
+				$scope.polls = {
+					items: res.data
+				}
+				console.log($scope.polls);
+			});
 		}
-		console.log($scope.polls);
 	});
 
 	$scope.viewPoll = function(param){
