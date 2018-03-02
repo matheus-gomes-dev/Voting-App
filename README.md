@@ -12,3 +12,5 @@ User Stories:
 * As an authenticated user, if I don't like the options on a poll, I can create a new option.
 
 You can check the app running on [Heroku](http://sheltered-harbor-60080.herokuapp.com/)
+
+*Note: In this project, EJS is rendering content server side, which I regret. You may notice some strange behavior when pages area loading. I'm planing to remove EJS and work with AngularJS routes instead, in a near future.*
