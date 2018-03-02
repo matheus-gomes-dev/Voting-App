@@ -37,7 +37,11 @@ myApp.controller('navbarController', function($scope, $http, vottingAppServices)
 	}
 
 	$scope.logout = function(){
-		$http.get('/logout')
+		console.log("teste a");
+		$http.get('/logout').then(function(res){
+			console.log("teste b");
+			console.log(res)
+		})
 	}
 
 });
