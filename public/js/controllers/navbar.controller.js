@@ -36,4 +36,8 @@ myApp.controller('navbarController', function($scope, $http, vottingAppServices)
 		location.replace('http://' + hostname + ':' + port + '/mypolls');
 	}
 
+	$scope.logout = function(){
+		$http.get('/logout')
+	}
+
 });
