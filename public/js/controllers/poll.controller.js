@@ -30,30 +30,29 @@ myApp.controller('pollController', function($scope, $http, toastr, $uibModal, Mo
 	}
 
 	$scope.newOption = function(){
-		var user = localStorage.getItem('votingApp_user');
-		if (user == "false")
-			toastr.warning("You must be authenticated to create a new option!", "Warning");
-		else{
-			console.log("procedimento para criar opção")
-			
-			//http://dwmkerr.github.io/angular-modal-service/
+		vottingAppServices.authentication(function(response){
+			if(!response)
+				toastr.warning("You must be authenticated to create a new option!", "Warning");
+			else{
+				console.log("procedimento para criar opção")
+				
+				//http://dwmkerr.github.io/angular-modal-service/
 
-		    ModalService.showModal({
-			    templateUrl: "views/modal.newoption.html",
-			    controller: "modalController"
-			}).then(function(modal) {
+			    ModalService.showModal({
+				    templateUrl: "views/modal.newoption.html",
+				    controller: "modalController"
+				}).then(function(modal) {
 
-				console.log(modal);
+					console.log(modal);
 
-			    //it's a bootstrap element, use 'modal' to show it
-			    modal.element.modal();
-			    modal.close.then(function(result) {
-			      	console.log(result);
-			    });
-			});
-  
-		    
-		}
+				    //it's a bootstrap element, use 'modal' to show it
+				    modal.element.modal();
+				    modal.close.then(function(result) {
+				      	console.log(result);
+				    });
+				});
+			}
+		})
 	}
 
 	$scope.submitVote = function(){
