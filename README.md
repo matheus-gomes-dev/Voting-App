@@ -1,5 +1,6 @@
 # Voting App
 MEAN Stack app for online votation polls
+
 User Stories:
 * As an authenticated user, I can keep my polls and come back later to access them.
 * As an authenticated user, I can share my polls with my friends.
@@ -9,3 +10,5 @@ User Stories:
 * As an unauthenticated or authenticated user, I can see and vote on everyone's polls.
 * As an unauthenticated or authenticated user, I can see the results of polls in chart form. 
 * As an authenticated user, if I don't like the options on a poll, I can create a new option.
+
+You can check the app running on [Heroku](http://sheltered-harbor-60080.herokuapp.com/)
