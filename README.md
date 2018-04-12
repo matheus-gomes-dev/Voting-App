@@ -1,6 +1,10 @@
 # Voting App
 MEAN Stack app for online votation polls
 
+
+![Alt Text](https://media.giphy.com/media/4N955npbUF3RTTEHhg/giphy.gif)
+
+
 User Stories:
 * As an authenticated user, I can keep my polls and come back later to access them.
 * As an authenticated user, I can share my polls with my friends.
